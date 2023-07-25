@@ -2,12 +2,11 @@
 import LoadingSVG from '@/assets/icons/loading'
 import React, { useEffect } from 'react'
 
-export const Redirect = ({ article }: { article: any }) => {
-    // useEffect(() => {
-    //     console.log("Redirect", article)
+export const Redirect = ({ url }: { url: string }) => {
+    useEffect(() => {
 
-    //     window.location.replace(`https://etlog.co/article/${article.article.id}`);
-    // }, [])
+        window.location.replace(url);
+    }, [])
 
     return (
         <div className='w-screen h-screen flex justify-center items-start  pl-20 text-white'>

@@ -2,6 +2,7 @@
 import { Metadata, ResolvingMetadata } from 'next'
 import articles from '@/assets/links'
 import jsdom from "jsdom";
+import axios from "axios";
 import { ColorSchemeEnum } from 'next/dist/lib/metadata/types/metadata-types';
 import { Redirect } from '@/components/redirect';
 type Props = {
@@ -82,15 +83,8 @@ export async function generateStaticParams() {
 
 async function getData({ linkId }: { linkId: string }) {
   const article = require(`@/assets/links/${linkId}.json`)
-  console.log(article);
-  // const res = await fetch(article.url)
-  const html = await (await fetch(article.url, {
-    headers: {
-      'User-Agent': 'request'
-    }
-
-  })).text()
-  const metaData: MetadataType = extractMetaData(html);
+  const resp = await axios.get(article.url)
+  const metaData: MetadataType = extractMetaData(resp.data);
   return metaData
 }
 

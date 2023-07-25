@@ -4,8 +4,7 @@ import React, { useEffect } from 'react'
 
 export const Redirect = ({ url }: { url: string }) => {
     useEffect(() => {
-
-        window.location.replace(url);
+        setTimeout(() => { window.location.replace(url); }, 1000)
     }, [])
 
     return (

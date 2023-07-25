@@ -1,7 +1,7 @@
 const LoadingSVG = ({ width = "100", height = "100" }: { width?: string, height?: string }) => {
     return (
         <svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" width={width} height={height} x="0px" y="0px"
-            viewBox="0 0 100 100" enable-background="new 0 0 0 0" >
+            viewBox="0 0 100 100" enableBackground="new 0 0 0 0" >
             <circle fill="currentColor" stroke="none" cx="6" cy="50" r="6">
                 <animateTransform
                     attributeName="transform"

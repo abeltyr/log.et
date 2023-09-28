@@ -62,7 +62,7 @@ export default function Home() {
                     <p className="mb-4">We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
 
                     <h2 className="text-xl font-semibold mt-6 mb-4">Contact Us</h2>
-                    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a href="mailto:Support@etlog.co" className="text-blue-500 underline">Support@etlog.co</a>.</p>
+                    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a href="mailto:Support@etlog.co" className="text-blue-500 underline">tcubeSupport@etlog.co</a>.</p>
 
                 </div>
             </div>

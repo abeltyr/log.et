@@ -4,7 +4,7 @@ import React from 'react'
 
 export const Footer = () => {
     return (
-        <div className='w-screen flex justify-center bg-white/75 py-2 '>
+        <div className='w-screen flex justify-center bg-[#E9ECEF] py-2 '>
             <div
                 className={`w-full max-w-[1440px] min-w-[280px] margin flex  items-center justify-center flex-col py-2 `}>
                 <div className=' flex flex-col items-center h-full '>

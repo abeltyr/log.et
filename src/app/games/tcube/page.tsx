@@ -19,18 +19,18 @@ export default function Home() {
                     TCube
                 </div>
 
-                {/* <div className='flex justify-center gap-4 items-center' >
-                    <div className='relative w-[194px] h-[75px] rounded-md cursor-pointer hover:scale-105 duration-500' onClick={() => {
+                <div className='flex justify-center gap-4 items-center' >
+                    {/* <div className='relative w-[194px] h-[75px] rounded-md cursor-pointer hover:scale-105 duration-500' onClick={() => {
                         window.open('https://docs.google.com/document/d/1ywO8C1rcLHeEpjexiSG-bcgg7ClmKVr6Lx4CW3q7iCU/edit?usp=sharing', '_blank');
                     }}>
                         <Image src={"/images/google-play-badge.png"} fill alt="Google Play Store" />
-                    </div>
+                    </div> */}
                     <div className='w-[194px] h-[50px] relative rounded-md cursor-pointer hover:scale-105 duration-500' onClick={() => {
-                        window.open('https://docs.google.com/document/d/1ywO8C1rcLHeEpjexiSG-bcgg7ClmKVr6Lx4CW3q7iCU/edit?usp=sharing', '_blank');
+                        window.open('https://apps.apple.com/app/t-cube/id6467569235', '_blank');
                     }}>
                         <IosSVG width='100%' height='100%' />
                     </div>
-                </div> */}
+                </div>
             </div>
             <Footer />
         </main >

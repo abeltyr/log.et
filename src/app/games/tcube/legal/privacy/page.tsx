@@ -1,5 +1,4 @@
 import React from 'react'
-import policies from "@/assets/legal/privacy.json";
 import { Footer } from '@/components/footer';
 import LogoSVG from '@/assets/icons/logo';
 

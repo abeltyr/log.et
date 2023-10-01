@@ -1,13 +1,36 @@
-"use client";
+
 
 import IosSVG from '@/assets/icons/ios'
 import LogoSVG from '@/assets/icons/logo'
 import { Footer } from '@/components/footer'
+import { Metadata, } from 'next'
 import Image from 'next/image'
 import React from 'react'
+
+
+export async function generateMetadata(
+): Promise<Metadata> {
+    return {
+        title: 'Qews gaming',
+        openGraph: {
+            title: 'Qews gaming',
+            description: `Tcube: Tic Tac Toe reimagined. Dive into interconnected mini-games where every move sets the stage for your opponent. Master the strategy, challenge your skills, and redefine your Tic Tac Toe experience. Are you up for the Tcube challenge?!`,
+            locale: 'en_US',
+        },
+        description: `Tcube: Tic Tac Toe reimagined. Dive into interconnected mini-games where every move sets the stage for your opponent. Master the strategy, challenge your skills, and redefine your Tic Tac Toe experience. Are you up for the Tcube challenge?!`,
+        generator: 'Qews',
+        applicationName: 'Qews',
+        referrer: 'origin-when-cross-origin',
+        colorScheme: 'dark',
+        publisher: 'Qews',
+        robots: {
+            follow: true,
+            index: true
+        },
+    }
+}
+
 export default function Home() {
-
-
     return (
         <main className='w-screen h-screen bg-white select-none'>
             <div className='w-full max-w-[1440px] h-full flex flex-col  justify-center items-center gap-y-8'>
@@ -19,17 +42,13 @@ export default function Home() {
                     TCube
                 </div>
 
-                <div className='flex justify-center gap-4 items-center' >
-                    {/* <div className='relative w-[194px] h-[75px] rounded-md cursor-pointer hover:scale-105 duration-500' onClick={() => {
-                        window.open('https://docs.google.com/document/d/1ywO8C1rcLHeEpjexiSG-bcgg7ClmKVr6Lx4CW3q7iCU/edit?usp=sharing', '_blank');
-                    }}>
+                <div className='flex justify-center gap-x-10 md:gap-4 gap-y-4 items-center flex-wrap' >
+                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.qews.TCube" className='relative w-[200px] md:w-[194px] h-[80px] md:h-[75px] rounded-md cursor-pointer hover:scale-105 duration-500' >
                         <Image src={"/images/google-play-badge.png"} fill alt="Google Play Store" />
-                    </div> */}
-                    <div className='w-[194px] h-[50px] relative rounded-md cursor-pointer hover:scale-105 duration-500' onClick={() => {
-                        window.open('https://apps.apple.com/app/t-cube/id6467569235', '_blank');
-                    }}>
+                    </a>
+                    <a target="_blank" href="https://apps.apple.com/app/t-cube/id6467569235" className='w-[200px] md:w-[194px] h-[55px] md:h-[50px] relative rounded-md cursor-pointer hover:scale-105 duration-500' >
                         <IosSVG width='100%' height='100%' />
-                    </div>
+                    </a>
                 </div>
             </div>
             <Footer />

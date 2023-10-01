@@ -3,18 +3,22 @@
 import IosSVG from '@/assets/icons/ios'
 import LogoSVG from '@/assets/icons/logo'
 import { Footer } from '@/components/footer'
-import { Metadata, } from 'next'
+import { Metadata, ResolvingMetadata, } from 'next'
 import Image from 'next/image'
 import React from 'react'
 
 
 export async function generateMetadata(
+    { }: any,
+    parent: ResolvingMetadata
 ): Promise<Metadata> {
+    const previousImages = (await parent).openGraph?.images || []
     return {
         title: 'Qews gaming',
         openGraph: {
             title: 'Qews gaming',
-            description: `Tcube: Tic Tac Toe reimagined. Dive into interconnected mini-games where every move sets the stage for your opponent. Master the strategy, challenge your skills, and redefine your Tic Tac Toe experience. Are you up for the Tcube challenge?!`,
+            description: `Tcube: Tic Tac Toe reimagined. Dive into interconnected mini-games where every move sets the stage for your opponent. Master the strategy, challenge your skills, and redefine your Tic Tac Toe experience. Are you up for the Tcube challenge?`,
+            images: ["https://etlog.s3.amazonaws.com/loget/games/icon.png", ...previousImages],
             locale: 'en_US',
         },
         description: `Tcube: Tic Tac Toe reimagined. Dive into interconnected mini-games where every move sets the stage for your opponent. Master the strategy, challenge your skills, and redefine your Tic Tac Toe experience. Are you up for the Tcube challenge?!`,
@@ -27,8 +31,16 @@ export async function generateMetadata(
             follow: true,
             index: true
         },
+        twitter: {
+            card: "summary_large_image",
+            title: 'Qews gaming',
+            description: `Tcube: Tic Tac Toe reimagined. Dive into interconnected mini-games where every move sets the stage for your opponent. Master the strategy, challenge your skills, and redefine your Tic Tac Toe experience. Are you up for the Tcube challenge?`,
+            creator: "@etlogresearch",
+            images: "https://etlog.s3.amazonaws.com/loget/games/icon.png",
+        }
     }
 }
+
 
 export default function Home() {
     return (
